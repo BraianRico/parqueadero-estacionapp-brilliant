@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="#F7F7F7">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nologo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+
+            android:layout_marginTop="20dp"
+            android:text="Estado @ctivo "
+            android:textColor="#FA855B1D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="100dp"
+            android:text="Gestión de celdas"
+            android:textColor="#c2ffffff"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnCrearCelda"
+            android:layout_width="286dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="70dp"
+            android:backgroundTint="#7C855B1D"
+            android:text="Crear Celda" />
+
+        <Button
+            android:id="@+id/btnListarCeldas"
+            android:layout_width="286dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#7C855B1D"
+            android:text="Listar Celdas Libres" />
+
+        <Button
+            android:id="@+id/btnAsignarCelda"
+            android:layout_width="286dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#7C855B1D"
+            android:text="Asignar Celda" />
+
+        <Button
+            android:id="@+id/btnEditarCelda"
+            android:layout_width="286dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#7C855B1D"
+            android:text="Editar Celda" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="120dp"
+                android:backgroundTint="#578A6328"
+                android:text="Atras" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

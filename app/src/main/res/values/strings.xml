@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Mobile_app</string>
+    <string name="app_name">Parqueadero</string>
+    <string name="ID">Cedula</string>
+    <string name="name">Nombre</string>
+    <string name="lastname">Apellido</string>
+    <string name="phone">Teléfono</string>
+    <string name="pwd">Contraseña</string>
+    <string name="title">Inicio de Sesión</string>
+    <string name="Registroe">Datos Empleado</string>
+    <string name="txtUser">Usuario</string>
+    <string name="escribir_nombre">Dígite su nombre</string>
+    <string name="escribir_clave">Dígite su clave</string>
+    <string name="search">Buscar</string>
+    <string name="update">Actualizar</string>
+    <string name="delete">Eliminar</string>
+    <string name="regresar">Regresar</string>
+    <string name="save">Guardar</string>
+    <string name="registro">Registrarse</string>
 </resources>

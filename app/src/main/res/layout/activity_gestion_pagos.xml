@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nologo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+
+                android:layout_marginTop="20dp"
+                android:text="Estado @ctivo "
+                android:textColor="#FA855B1D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView45"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+
+                android:layout_marginTop="70dp"
+                android:text="__________________________________________________"
+                android:textColor="#FA855B1D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="15dp"
+                android:text="Buscar Cliente"
+                android:textColor="#c2ffffff"
+                android:textSize="24dp" />
+
+            <EditText
+                android:id="@+id/campoIdDocumento"
+                android:layout_width="170dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_text"
+                android:backgroundTint="#40C19350"
+                android:ems="10"
+                android:hint="Número Cédula"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColorHint="#63FFFFFF" />
+
+            <Button
+                android:id="@+id/btnBuscar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="-45dp"
+                android:backgroundTint="#FA855B1D"
+                android:text="Buscar" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+
+                android:layout_marginTop="15dp"
+                android:text="__________________________________________________"
+                android:textColor="#FA855B1D"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="40dp"
+                android:text="Gestión de pagos"
+                android:textColor="#c2ffffff"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:text="Datos Cliente"
+                android:textColor="#c2ffffff"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/campoNombre"
+                android:layout_width="353dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_text"
+                android:backgroundTint="#40C19350"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColorHint="#63FFFFFF" />
+
+            <Button
+                android:id="@+id/btnConsultar"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#FA855B1D"
+                android:text="Consultar" />
+
+            <Button
+                android:id="@+id/btnPagar"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="207dp"
+                android:layout_marginTop="-48dp"
+                android:backgroundTint="#FA855B1D"
+                android:text="Pagar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRegresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="120dp"
+                    android:backgroundTint="#578A6328"
+                    android:text="Atras" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
+

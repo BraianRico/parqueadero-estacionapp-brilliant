@@ -1,68 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="239dp"
-        android:layout_height="218dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_parqueadero" />
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="#F7F7F7">
 
-    <Button
-        android:id="@+id/btnentrada"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Entrada de Vehiculos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:background="@drawable/nologo">
 
-    <Button
-        android:id="@+id/btnsalida"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Salida de Vehiculos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnentrada" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnceldas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Gestion de Celdas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsalida" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnpagos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Gestion de Pagos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnceldas" />
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
 
-    <Button
-        android:id="@+id/btnusuarios"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Gestion de Usuarios"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnpagos" />
+                    android:layout_marginTop="20dp"
+                    android:text="Estado @ctivo "
+                    android:textColor="#FA855B1D"
+                    android:textSize="16sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="100dp"
+
+                    android:layout_marginTop="100dp"
+                    android:text="Acciones del sistema"
+                    android:textColor="#c2ffffff"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btngestioncliente"
+                    android:layout_width="286dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="70dp"
+                    android:backgroundTint="#7C855B1D"
+                    android:text="Gestion de Clientes" />
+
+                <Button
+                    android:id="@+id/btnEntradaSalida"
+                    android:layout_width="286dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#7C855B1D"
+                    android:text="Entrada/Salida de Vehiculos" />
+
+                <Button
+                    android:id="@+id/btnceldas"
+                    android:layout_width="286dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#7C855B1D"
+                    android:text="Gestion de Celdas" />
+
+                <Button
+                    android:id="@+id/btnpagos"
+                    android:layout_width="286dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#7C855B1D"
+                    android:text="Gestion de Pagos" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnSalir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:layout_marginLeft="185dp"
+                        android:layout_marginTop="120dp"
+                        android:backgroundTint="#578A6328"
+                        android:text="Cerrar sesión"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>
