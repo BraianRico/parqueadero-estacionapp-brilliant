@@ -118,7 +118,7 @@ android:layout_height="match_parent"
             android:textColorHint="#63FFFFFF" />
 
         <Button
-            android:id="@+id/btnActualizar"
+            android:id="@+id/btnActualizarCelda"
             android:layout_width="170dp"
             android:layout_height="48dp"
             android:layout_marginLeft="25dp"
@@ -127,7 +127,7 @@ android:layout_height="match_parent"
             android:text="Actualizar" />
 
         <Button
-            android:id="@+id/btnEliminar"
+            android:id="@+id/btnEliminarCelda"
             android:layout_width="170dp"
             android:layout_height="48dp"
             android:layout_marginLeft="207dp"

@@ -26,7 +26,7 @@ public class CrearCeldaActivity extends AppCompatActivity implements View.OnClic
         campoIdCelda= findViewById(R.id.campoIdCelda);
         campoUbicacionCelda=findViewById(R.id.campoUbicacionCelda);
         btnRegresar=findViewById(R.id.btnRegresar);
-        btnGuardar=findViewById(R.id.btnGuardar);
+        btnGuardar=findViewById(R.id.btnGuardarCliente);
         btnRegresar.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
     }
@@ -35,12 +35,14 @@ public class CrearCeldaActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btnGuardar:
+            case R.id.btnGuardarCliente:
                 crearcelda();
-                break;
-            case R.id.btnRegresar:
                 Intent i2 = new Intent(CrearCeldaActivity.this,GestionCeldasActivity.class);
                 startActivity(i2);
+                break;
+            case R.id.btnRegresar:
+                Intent i3 = new Intent(CrearCeldaActivity.this,GestionCeldasActivity.class);
+                startActivity(i3);
                 break;
         }
     }

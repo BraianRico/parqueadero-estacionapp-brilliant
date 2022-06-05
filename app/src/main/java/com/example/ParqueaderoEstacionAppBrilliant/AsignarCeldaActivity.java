@@ -38,10 +38,12 @@ public class AsignarCeldaActivity extends AppCompatActivity implements View.OnCl
         switch (view.getId()){
             case R.id.btnAsignarCelda:
                 asignarCelda();
-                break;
-            case R.id.btnRegresar:
                 Intent i2 = new Intent(AsignarCeldaActivity.this,GestionCeldasActivity.class);
                 startActivity(i2);
+                break;
+            case R.id.btnRegresar:
+                Intent i3 = new Intent(AsignarCeldaActivity.this,GestionCeldasActivity.class);
+                startActivity(i3);
                 break;
         }
     }

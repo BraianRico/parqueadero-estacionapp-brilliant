@@ -27,8 +27,8 @@ public class EditarCeldaActivity extends AppCompatActivity implements View.OnCli
         campoIdCelda= findViewById(R.id.campoIdCelda);
         campoUbicacionCelda=findViewById(R.id.campoUbicacionCelda);
         btnBuscar=findViewById(R.id.btnBuscar);
-        btnActualizar=findViewById(R.id.btnActualizar);
-        btnEliminar=findViewById(R.id.btnEliminar);
+        btnActualizar=findViewById(R.id.btnActualizarCelda);
+        btnEliminar=findViewById(R.id.btnEliminarCelda);
         btnRegresar=findViewById(R.id.btnRegresar);
         btnBuscar.setOnClickListener(this);
         btnEliminar.setOnClickListener(this);
@@ -43,15 +43,19 @@ public class EditarCeldaActivity extends AppCompatActivity implements View.OnCli
             case R.id.btnBuscar:
                 buscarCelda();
                 break;
-            case R.id.btnActualizar:
+            case R.id.btnActualizarCelda:
                 actualizarCelda();
-                break;
-            case R.id.btnEliminar:
-                eliminarCelda();
-                break;
-            case R.id.btnRegresar:
                 Intent i2 = new Intent(EditarCeldaActivity.this,GestionCeldasActivity.class);
                 startActivity(i2);
+                break;
+            case R.id.btnEliminarCelda:
+                eliminarCelda();
+                Intent i3 = new Intent(EditarCeldaActivity.this,GestionCeldasActivity.class);
+                startActivity(i3);
+                break;
+            case R.id.btnRegresar:
+                Intent i4 = new Intent(EditarCeldaActivity.this,GestionCeldasActivity.class);
+                startActivity(i4);
                 break;
         }
 }

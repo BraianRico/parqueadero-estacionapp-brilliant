@@ -3,13 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_registro_celdas.xml" value="0.33" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_registro_entrada.xml" value="0.33" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_registro_pagos.xml" value="0.33" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_registro_salida.xml" value="0.33" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.33" />
-        <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_salida_vehiculos.xml" value="0.33" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/drawable/border_text.xml" value="0.2885" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_asignar_celda.xml" value="0.371875" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_crear_celda.xml" value="0.371875" />
