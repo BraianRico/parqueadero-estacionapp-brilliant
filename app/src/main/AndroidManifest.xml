@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ParqueaderoEstacionAppBrilliant">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mobile_app">
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.RegistroEmpleadosActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true" />
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.RegistroEntradaSalidaActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true" />
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.MainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.GestionClienteActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.CrearClienteActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+        android:exported="true"/>
+
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.GestionCeldasActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.CrearCeldaActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.EditarCeldaActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.AsignarCeldaActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.ListarCeldaActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.EditarClienteActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.GestionPagosActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.PagarActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.ListarPagosActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="true"/>
+        <activity
+            android:name="com.example.ParqueaderoEstacionAppBrilliant.LoginActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+    </application>
+
+</manifest>

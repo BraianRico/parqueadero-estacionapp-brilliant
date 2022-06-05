@@ -12,6 +12,7 @@
         <entry key="..\:/Users/JUAN C PRESIGA/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_salida_vehiculos.xml" value="0.33" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/drawable/border_text.xml" value="0.2885" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_asignar_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_crear_celda.xml" value="0.371875" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_crear_cliente.xml" value="0.26927083333333335" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_editar_celda.xml" value="0.26927083333333335" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app - copia/app/src/main/res/layout/activity_editar_cliente.xml" value="0.26927083333333335" />
@@ -56,6 +57,51 @@
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/activity_salida_vehiculos.xml" value="0.371875" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/item_list_celdas.xml" value="0.371875" />
         <entry key="..\:/Users/davii/AndroidStudioProjects/Mobile_app/app/src/main/res/layout/item_list_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/drawable/border_text.xml" value="0.334" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_asignar_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_crear_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_crear_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_editar_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_editar_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_gestion_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_gestion_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_gestion_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_listar_celdas.xml" value="0.18085106382978725" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_listar_pagos.xml" value="0.33" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_login.xml" value="0.18085106382978725" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_pagar.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_empleado.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_entrada.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_entrada_salida.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/activity_salida_vehiculos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/item_list_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant - actual/app/src/main/res/layout/item_list_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_asignar_celda.xml" value="0.256857855361596" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_crear_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_crear_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_editar_celda.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_editar_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_gestion_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_gestion_cliente.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_gestion_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_listar_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_listar_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_login.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_pagar.xml" value="0.2893258426966292" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_empleado.xml" value="0.33" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_entrada.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_entrada_salida.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_pagos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_registro_usuarios.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/activity_salida_vehiculos.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/item_list_celdas.xml" value="0.371875" />
+        <entry key="..\:/Users/davii/AndroidStudioProjects/Parqueadero_estacionapp-brilliant/app/src/main/res/layout/item_list_pagos.xml" value="0.371875" />
       </map>
     </option>
   </component>
