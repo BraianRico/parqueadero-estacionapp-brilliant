@@ -38,7 +38,7 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
         campoMarca=findViewById(R.id.txtcampoMarca);
         campoColor=findViewById(R.id.txtcampoColor);
         btnRegresar=findViewById(R.id.btnRegresar);
-        btnGuardar=findViewById(R.id.btnGuardar);
+        btnGuardar=findViewById(R.id.btnActualizarCliente);
         btnRegresar.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
 
@@ -49,12 +49,14 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btnGuardar:
+            case R.id.btnActualizarCliente:
                 registrarCliente();
+                Intent i2 = new Intent(CrearClienteActivity.this,GestionClienteActivity.class);
+                startActivity(i2);
                 break;
             case R.id.btnRegresar:
-                Intent i2 = new Intent(CrearClienteActivity.this,MainActivity.class);
-                startActivity(i2);
+                Intent i3 = new Intent(CrearClienteActivity.this,GestionClienteActivity.class);
+                startActivity(i3);
                 break;
         }
     }

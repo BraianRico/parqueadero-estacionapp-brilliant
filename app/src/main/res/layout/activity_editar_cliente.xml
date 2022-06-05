@@ -222,7 +222,7 @@
                 android:paddingStart="15dp" />
 
             <Button
-                android:id="@+id/btnGuardar"
+                android:id="@+id/btnActualizarCliente"
                 android:layout_width="170dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="25dp"
@@ -231,7 +231,7 @@
                 android:text="Actualizar" />
 
             <Button
-                android:id="@+id/btnEliminar2"
+                android:id="@+id/btnEliminarCliente"
                 android:layout_width="170dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="207dp"

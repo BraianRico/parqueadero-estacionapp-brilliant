@@ -198,7 +198,7 @@
                 android:textColorHint="#63FFFFFF" />
 
             <Button
-                android:id="@+id/btnGuardar"
+                android:id="@+id/btnActualizarCliente"
                 android:layout_width="286dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="60dp"

@@ -40,8 +40,8 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         campoColor=findViewById(R.id.campoIdColor);
         btnConsultar=findViewById(R.id.btnConsultar);
         btnRegresar=findViewById(R.id.btnRegresar);
-        btnGuardar=findViewById(R.id.btnGuardar);
-        btnEliminar2=findViewById(R.id.btnEliminar2);
+        btnGuardar=findViewById(R.id.btnActualizarCliente);
+        btnEliminar2=findViewById(R.id.btnEliminarCliente);
         btnRegresar.setOnClickListener(this);
         btnGuardar.setOnClickListener(this);
         btnEliminar2.setOnClickListener(this);
@@ -54,18 +54,22 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnGuardar:
+            case R.id.btnActualizarCliente:
                 actualizarCliente();
+                Intent i2 = new Intent(EditarClienteActivity.this, GestionClienteActivity.class);
+                startActivity(i2);
                 break;
             case R.id.btnRegresar:
-                Intent i2 = new Intent(EditarClienteActivity.this, MainActivity.class);
-                startActivity(i2);
+                Intent i3 = new Intent(EditarClienteActivity.this, GestionClienteActivity.class);
+                startActivity(i3);
                 break;
             case R.id.btnConsultar:
                 consultar();
                 break;
-            case R.id.btnEliminar2:
+            case R.id.btnEliminarCliente:
                 eliminarCliente();
+                Intent i4 = new Intent(EditarClienteActivity.this, GestionClienteActivity.class);
+                startActivity(i4);
                 break;
         }
 
