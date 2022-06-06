@@ -20,7 +20,7 @@ import java.util.Calendar;
 public class RegistroEntradaSalidaActivity extends AppCompatActivity implements View.OnClickListener{
 
     //se inicializan los campos y boton que se utilizan
-    EditText renroplaca, remarca, remodelo, recolor, campoNovedad;
+    EditText renroplaca, remarca, remodelo, recolor;
     Button btnRegistrarIngreso, btnRegistrarSalida, btnBuscar, btnRegresar;
     String mydate, ingreso, salida;
 
@@ -30,11 +30,10 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_registro_entrada_salida);
 
-        renroplaca = (EditText) findViewById(R.id.renroplaca);
+        renroplaca = (EditText) findViewById(R.id.NumplacaEntradaSalida);
         remarca = (EditText) findViewById(R.id.remarca);
         remodelo = (EditText) findViewById(R.id.remodelo);
         recolor = (EditText) findViewById(R.id.recolor);
-        campoNovedad = findViewById(R.id.campoNovedad);
 
         btnRegistrarIngreso = (Button) findViewById(R.id.btnRegistrarIngreso);
         btnRegistrarSalida = (Button) findViewById(R.id.btnRegistrarSalida);
@@ -105,7 +104,7 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         ingreso = "Ingreso";
         values.put(Utilidades.CAMPO_MOVIMIENTO,ingreso.toString());
         values.put(Utilidades.CAMPO_PLACAR,renroplaca.getText().toString());
-        values.put(Utilidades.CAMPO_NOVEDAD, campoNovedad.getText().toString());
+
         Long idResultante=db.insert(Utilidades.TABLA_REGISTRO,Utilidades.CAMPO_ID_REGISTRO,values);
         Toast.makeText(getApplicationContext(), "Se ha guardado el ingreso "+idResultante, Toast.LENGTH_SHORT).show();
         limpiar();
@@ -132,7 +131,7 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         remarca.setText("");
         recolor.setText("");
         renroplaca.setText("");
-        campoNovedad.setText("");
+
     }
 
 
