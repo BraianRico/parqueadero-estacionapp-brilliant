@@ -42,7 +42,9 @@ public class RegistroEmpleadosActivity extends AppCompatActivity implements View
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnRegistrar:
-                registrarUsuarios();
+                registrarEmpleado();
+                Intent i1 = new Intent(RegistroEmpleadosActivity.this,LoginActivity.class);
+                startActivity(i1);
                 break;
             case R.id.btnRegresar:
                 Intent i2 = new Intent(RegistroEmpleadosActivity.this,LoginActivity.class);
@@ -51,26 +53,18 @@ public class RegistroEmpleadosActivity extends AppCompatActivity implements View
         }
     }
 
-    public void registrarUsuarios(){
+    public void registrarEmpleado(){
 
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
 
-        //Creando datos en la tabla usuario
-        ContentValues values= new ContentValues();
-        values.put(Utilidades.CAMPO_IDU,campoIDU.getText().toString());
-        values.put(Utilidades.CAMPO_NOMBRE,campoNombre.getText().toString());
-        values.put(Utilidades.CAMPO_APELLIDO,campoApellido.getText().toString());
-        values.put(Utilidades.CAMPO_TELEFONO,campoTelefono.getText().toString());
-        Long idResultante=db.insert(Utilidades.TABLA_USUARIO,Utilidades.CAMPO_IDU,values);
-
 
         //creando datos en la tabla empleado
-        ContentValues values1= new ContentValues();
-        values1.put(Utilidades.CAMPO_IDUE,campoIDU.getText().toString());
-        values1.put(Utilidades.CAMPO_USR,campoNusuario.getText().toString());
-        values1.put(Utilidades.CAMPO_PASSWORD,campoPWD.getText().toString());
-        Long idResultante2=db.insert(Utilidades.TABLA_EMPLEADO,Utilidades.CAMPO_ID_EMPLEADO,values1);
+        ContentValues values= new ContentValues();
+        values.put(Utilidades.CAMPO_IDUE,campoIDU.getText().toString());
+        values.put(Utilidades.CAMPO_USR,campoNusuario.getText().toString());
+        values.put(Utilidades.CAMPO_PASSWORD,campoPWD.getText().toString());
+        Long idResultante=db.insert(Utilidades.TABLA_EMPLEADO,Utilidades.CAMPO_ID_EMPLEADO,values);
         Toast.makeText(getApplicationContext(), "Se ha creado el empleado ", Toast.LENGTH_SHORT).show();
         limpiar();
         Intent i2 = new Intent(RegistroEmpleadosActivity.this,LoginActivity.class);

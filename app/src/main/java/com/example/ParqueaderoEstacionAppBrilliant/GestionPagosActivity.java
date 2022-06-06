@@ -1,4 +1,4 @@
-package com.example.ParqueaderoEstacionAppBrilliant;
+/*package com.example.ParqueaderoEstacionAppBrilliant;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -115,4 +115,4 @@ public class GestionPagosActivity extends AppCompatActivity implements View.OnCl
         campoNombre.setText("");
     }
 
-}
+}*/
