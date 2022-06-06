@@ -18,6 +18,9 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     //metodos create y upgrade de SQLite
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL(Utilidades.CREAR_TABLA_CLIENTES);
+        db.execSQL(Utilidades.CREAR_TABLA_VEHICULOS);
+
         db.execSQL(Utilidades.CREAR_TABLA_USUARIO);
         db.execSQL(Utilidades.CREAR_TABLA_EMPLEADO);
         db.execSQL(Utilidades.CREAR_TABLA_CLIENTE);
@@ -26,10 +29,14 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_REGISTRO);
         db.execSQL(Utilidades.CREAR_TABLA_SUSCRIPCION);
         db.execSQL(Utilidades.CREAR_TABLA_FACTURA);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CLIENTES);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_VEHICULOS);
+
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_REGISTRO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_USUARIO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CELDA);

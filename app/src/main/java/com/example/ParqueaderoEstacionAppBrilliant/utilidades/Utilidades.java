@@ -62,6 +62,39 @@ public class Utilidades {
     public static final String CAMPO_NOVEDAD="novedad";
     public static final String CAMPO_PLACAR="placa_id";
 
+    // constantes de tabla CLIENTES
+    public static final String TABLA_CLIENTES="clientes";
+    public static final String CAMPO_IDCLIENTE="idCliente";
+    public static final String CAMPO_NOMBRECLIENTE="nombreCliente";
+    public static final String CAMPO_APELLIDOCLIENTE="apellidoCliente";
+    public static final String CAMPO_TELEFONOCLIENTE="telefonoCliente";
+    public static final String CAMPO_CORREOCLIENTE="correoCliente";
+// constantes de tabla CLIENTES
+
+
+    // constantes de tabla VEHICULOS
+    public static final String TABLA_VEHICULOS="vehiculos";
+    public static final String CAMPO_IDPLACAVEHICULO="idPlacavehiculo";
+    public static final String CAMPO_MODELOVEHICULO="modelovehiculo";
+    public static final String CAMPO_MARCAVEHICULO="marcavehiculo";
+    public static final String CAMPO_COLORVEHICULO="colorvehiculo";
+    public static final String CAMPO_IDCLIENTEVEHICULO="clienteIdVehiculo";
+    public static final String CAMPO_NOMBRECLIENTEVEHICULO="clienteNombreVehiculo";
+    public static final String CAMPO_HORAINGRESO="horaIngreso";
+    public static final String CAMPO_HORASALIDA="horaSalida";
+
+
+
+    //Creación de la tabla CLIENTES
+    public static  final String CREAR_TABLA_CLIENTES=
+            "CREATE TABLE "+TABLA_CLIENTES+" ("+CAMPO_IDCLIENTE+" TEXT PRIMARY KEY UNIQUE, "+
+                    CAMPO_NOMBRECLIENTE+" TEXT, "+CAMPO_APELLIDOCLIENTE+" TEXT, "+CAMPO_TELEFONOCLIENTE+" TEXT, "+CAMPO_CORREOCLIENTE+" TEXT)";
+
+    //Creación de la tabla VEHICULOS
+    public static  final String CREAR_TABLA_VEHICULOS=
+            "CREATE TABLE "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELOVEHICULO+" TEXT, "+CAMPO_MARCAVEHICULO+" TEXT, "+
+                    CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
+
     //Creación de la tabla usuario
     public static  final String CREAR_TABLA_USUARIO="CREATE TABLE "+TABLA_USUARIO+" ("+CAMPO_IDU+" INTEGER PRIMARY KEY, "+CAMPO_NOMBRE+" TEXT, "+CAMPO_APELLIDO+" TEXT, "+CAMPO_TELEFONO+" TEXT)";
 
