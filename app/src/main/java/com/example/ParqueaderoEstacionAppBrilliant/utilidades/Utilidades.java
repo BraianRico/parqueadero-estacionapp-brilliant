@@ -8,15 +8,6 @@ public class Utilidades {
     public static final String CAMPO_USR="usr";
     public static final String CAMPO_PASSWORD="password";
 
-
-    //Constantes de la tabla suscripcion
-    public static final String TABLA_SUSCRIPCION="suscripcion";
-    public static final String CAMPO_SUSCRIPCION="id_suscripcion";
-    public static final String CAMPO_FECHA_INICIO="fecha_inicio";
-    public static final String CAMPO_FECHA_FINAL="fecha_final";
-    public static final String CAMPO_ESTADO_SUSCRIPCION="estado_suscripcion";
-    public static final String CAMPO_CELDA_ID="celda_id";
-
     //constantes de tabla cliente
     public static final String TABLA_CLIENTE="cliente";
     public static final String CAMPO_ID_CLIENTE="id_cliente";
@@ -92,14 +83,6 @@ public class Utilidades {
                     CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
 
 
-    //Creación de la tabla suscripcion
-    public static final String CREAR_TABLA_SUSCRIPCION=
-            "CREATE TABLE "+TABLA_SUSCRIPCION+" ("+CAMPO_SUSCRIPCION+" INTEGER PRIMARY KEY, "+CAMPO_FECHA_INICIO+" TEXT, "+CAMPO_FECHA_FINAL+" TEXT, "+CAMPO_ESTADO_SUSCRIPCION+" INTEGER, "+CAMPO_CELDA_ID+" INTEGER, "+" FOREIGN KEY ("+CAMPO_CELDA_ID+") REFERENCES "+TABLA_CELDA+" ( "+CAMPO_CELDA+"))";
-
-    //Creación de la tabla cliente
-    public static final String CREAR_TABLA_CLIENTE=
-            "CREATE TABLE "+TABLA_CLIENTE+" ("+CAMPO_ID_CLIENTE+" INTEGER PRIMARY KEY UNIQUE, "+CAMPO_CORREO+" TEXT, "+CAMPO_IDUC+" INTEGER, "+CAMPO_SUSCRIPCION_IDC+" INTEGER, "+" FOREIGN KEY ( "+CAMPO_IDUC+" ) REFERENCES "+TABLA_CLIENTES+" ("+CAMPO_IDCLIENTE+"), "+" FOREIGN KEY ("+CAMPO_SUSCRIPCION_IDC+" ) REFERENCES "+TABLA_SUSCRIPCION+" ("+CAMPO_SUSCRIPCION+"))";
-
     //Creación de la tabla vehiculo
     public static  final String CREAR_TABLA_VEHICULO=
             "CREATE TABLE "+TABLA_VEHICULO+" ("+CAMPO_ID_PLACA+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELO+" TEXT, "+CAMPO_MARCA+" TEXT, "+
@@ -111,7 +94,7 @@ public class Utilidades {
 
     //Creación de la tabla factura
     public static final String CREAR_TABLA_FACTURA=
-            "CREATE TABLE "+TABLA_FACTURA+" ("+CAMPO_FACTURA+" INTEGER PRIMARY KEY, "+CAMPO_FECHA_FACTURA+" TEXT, "+CAMPO_VALOR+" INTEGER, "+CAMPO_MESES+" INTEGER, "+CAMPO_SUSCRIPCION_IDF+" INTEGER,  "+" FOREIGN KEY ("+CAMPO_SUSCRIPCION_IDF+") REFERENCES "+TABLA_SUSCRIPCION+" ( "+CAMPO_SUSCRIPCION+"))";
+            "CREATE TABLE "+TABLA_FACTURA+" ("+CAMPO_FACTURA+" INTEGER PRIMARY KEY, "+CAMPO_FECHA_FACTURA+" TEXT, "+CAMPO_VALOR+" INTEGER, "+CAMPO_MESES+" INTEGER, "+CAMPO_SUSCRIPCION_IDF+" INTEGER)";
 
     //Creación de la tabla registro
     public static final String CREAR_TABLA_REGISTRO =

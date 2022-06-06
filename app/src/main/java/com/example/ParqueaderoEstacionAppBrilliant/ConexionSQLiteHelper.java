@@ -20,13 +20,10 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Utilidades.CREAR_TABLA_CLIENTES);
         db.execSQL(Utilidades.CREAR_TABLA_VEHICULOS);
-
         db.execSQL(Utilidades.CREAR_TABLA_EMPLEADO);
-        db.execSQL(Utilidades.CREAR_TABLA_CLIENTE);
         db.execSQL(Utilidades.CREAR_TABLA_VEHICULO);
         db.execSQL(Utilidades.CREAR_TABLA_CELDA);
         db.execSQL(Utilidades.CREAR_TABLA_REGISTRO);
-        db.execSQL(Utilidades.CREAR_TABLA_SUSCRIPCION);
         db.execSQL(Utilidades.CREAR_TABLA_FACTURA);
 
     }
@@ -35,13 +32,11 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CLIENTES);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_VEHICULOS);
-
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_REGISTRO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CELDA);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CLIENTE);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_EMPLEADO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_VEHICULO);
-        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_SUSCRIPCION);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_FACTURA);
         onCreate(db);
     }
