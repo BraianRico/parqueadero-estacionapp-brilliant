@@ -16,7 +16,7 @@ import com.example.ParqueaderoEstacionAppBrilliant.utilidades.Utilidades;
 
 public class RegistroEmpleadosActivity extends AppCompatActivity implements View.OnClickListener{
 
-    EditText campoIDU, campoNombre, campoApellido, campoTelefono, campoNusuario, campoPWD;
+    EditText campoIdEmpleado, campoNombre, campoApellido, campoTelefono, campoNusuario, campoPWD;
     Button btnregistrar, btnregresar;
 
     @Override
@@ -24,13 +24,13 @@ public class RegistroEmpleadosActivity extends AppCompatActivity implements View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_empleado);
 
-        campoIDU = findViewById(R.id.txtcampoIDU); //Enlazar mi variable con la vista
-        campoNombre = findViewById(R.id.txtcampoNombre); //Enlazar mi variable con la vista
+        campoIdEmpleado = findViewById(R.id.txtcampoIDEmpleado);
+        campoNombre = findViewById(R.id.txtcampoNombre);
         campoApellido = findViewById(R.id.txtcampoApellido);
         campoTelefono = findViewById(R.id.txtcampotelefono);
         campoNusuario= findViewById(R.id.txtcampoNusuario);
         campoPWD = findViewById(R.id.txtCampoPWD);
-        btnregistrar = findViewById(R.id.btnRegistrar); //Enlazarme con el botón
+        btnregistrar = findViewById(R.id.btnRegistrar);
         btnregresar =findViewById(R.id.btnRegresar);
         btnregistrar.setOnClickListener(this);
         btnregresar.setOnClickListener(this);
@@ -61,7 +61,7 @@ public class RegistroEmpleadosActivity extends AppCompatActivity implements View
 
         //creando datos en la tabla empleado
         ContentValues values= new ContentValues();
-        values.put(Utilidades.CAMPO_IDUE,campoIDU.getText().toString());
+        values.put(Utilidades.CAMPO_ID_EMPLEADO,campoIdEmpleado.getText().toString());
         values.put(Utilidades.CAMPO_USR,campoNusuario.getText().toString());
         values.put(Utilidades.CAMPO_PASSWORD,campoPWD.getText().toString());
         Long idResultante=db.insert(Utilidades.TABLA_EMPLEADO,Utilidades.CAMPO_ID_EMPLEADO,values);
@@ -74,7 +74,7 @@ public class RegistroEmpleadosActivity extends AppCompatActivity implements View
 
     //Método para limpiar los datos de las vistas
     public void limpiar(){
-                campoIDU.setText("");
+                campoIdEmpleado.setText("");
                 campoNombre.setText("");
                 campoApellido.setText("");
                 campoTelefono.setText("");

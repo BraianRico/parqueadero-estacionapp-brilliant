@@ -7,7 +7,7 @@ public class Utilidades {
     public static final String CAMPO_ID_EMPLEADO="id_empleado";
     public static final String CAMPO_USR="usr";
     public static final String CAMPO_PASSWORD="password";
-    public static final String CAMPO_IDUE="usuario_id";
+
 
     //Constantes de la tabla suscripcion
     public static final String TABLA_SUSCRIPCION="suscripcion";
@@ -76,6 +76,9 @@ public class Utilidades {
     public static final String CAMPO_HORAINGRESO="horaIngreso";
     public static final String CAMPO_HORASALIDA="horaSalida";
 
+    // Creación de la tabla empleado
+    public static final String CREAR_TABLA_EMPLEADO=
+            "CREATE TABLE "+TABLA_EMPLEADO+" ("+CAMPO_ID_EMPLEADO+" TEXT PRIMARY KEY UNIQUE , "+CAMPO_USR+" TEXT, "+CAMPO_PASSWORD+" TEXT)";
 
 
     //Creación de la tabla CLIENTES
@@ -88,9 +91,6 @@ public class Utilidades {
             "CREATE TABLE "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELOVEHICULO+" TEXT, "+CAMPO_MARCAVEHICULO+" TEXT, "+
                     CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
 
-    // Creación de la tabla empleado
-    public static final String CREAR_TABLA_EMPLEADO=
-            "CREATE TABLE "+TABLA_EMPLEADO+" ("+CAMPO_ID_EMPLEADO+" INTEGER PRIMARY KEY , "+CAMPO_USR+" TEXT, "+CAMPO_PASSWORD+" TEXT)";
 
     //Creación de la tabla suscripcion
     public static final String CREAR_TABLA_SUSCRIPCION=
