@@ -2,13 +2,6 @@ package com.example.ParqueaderoEstacionAppBrilliant.utilidades;
 
 public class Utilidades {
 
-    //Constantes campos tabla usuario
-    public static final String TABLA_USUARIO="usuario";
-    public static final String CAMPO_IDU="id_usuario";
-    public static final String CAMPO_NOMBRE="nombre";
-    public static final String CAMPO_APELLIDO="apellido";
-    public static final String CAMPO_TELEFONO="telefono";
-
     //constantes de tabla empleado
     public static final String TABLA_EMPLEADO="empleado";
     public static final String CAMPO_ID_EMPLEADO="id_empleado";
@@ -95,12 +88,9 @@ public class Utilidades {
             "CREATE TABLE "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELOVEHICULO+" TEXT, "+CAMPO_MARCAVEHICULO+" TEXT, "+
                     CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
 
-    //Creación de la tabla usuario
-    public static  final String CREAR_TABLA_USUARIO="CREATE TABLE "+TABLA_USUARIO+" ("+CAMPO_IDU+" INTEGER PRIMARY KEY, "+CAMPO_NOMBRE+" TEXT, "+CAMPO_APELLIDO+" TEXT, "+CAMPO_TELEFONO+" TEXT)";
-
     // Creación de la tabla empleado
     public static final String CREAR_TABLA_EMPLEADO=
-            "CREATE TABLE "+TABLA_EMPLEADO+" ("+CAMPO_ID_EMPLEADO+" INTEGER PRIMARY KEY , "+CAMPO_USR+" TEXT, "+CAMPO_PASSWORD+" TEXT, "+CAMPO_IDUE+" INTEGER, FOREIGN KEY("+CAMPO_IDUE+" ) REFERENCES  "+TABLA_USUARIO+" ("+CAMPO_IDU+"))";
+            "CREATE TABLE "+TABLA_EMPLEADO+" ("+CAMPO_ID_EMPLEADO+" INTEGER PRIMARY KEY , "+CAMPO_USR+" TEXT, "+CAMPO_PASSWORD+" TEXT)";
 
     //Creación de la tabla suscripcion
     public static final String CREAR_TABLA_SUSCRIPCION=
@@ -108,7 +98,7 @@ public class Utilidades {
 
     //Creación de la tabla cliente
     public static final String CREAR_TABLA_CLIENTE=
-            "CREATE TABLE "+TABLA_CLIENTE+" ("+CAMPO_ID_CLIENTE+" INTEGER PRIMARY KEY UNIQUE, "+CAMPO_CORREO+" TEXT, "+CAMPO_IDUC+" INTEGER, "+CAMPO_SUSCRIPCION_IDC+" INTEGER, "+" FOREIGN KEY ( "+CAMPO_IDUC+" ) REFERENCES "+TABLA_USUARIO+" ("+CAMPO_IDU+"), "+" FOREIGN KEY ("+CAMPO_SUSCRIPCION_IDC+" ) REFERENCES "+TABLA_SUSCRIPCION+" ("+CAMPO_SUSCRIPCION+"))";
+            "CREATE TABLE "+TABLA_CLIENTE+" ("+CAMPO_ID_CLIENTE+" INTEGER PRIMARY KEY UNIQUE, "+CAMPO_CORREO+" TEXT, "+CAMPO_IDUC+" INTEGER, "+CAMPO_SUSCRIPCION_IDC+" INTEGER, "+" FOREIGN KEY ( "+CAMPO_IDUC+" ) REFERENCES "+TABLA_CLIENTES+" ("+CAMPO_IDCLIENTE+"), "+" FOREIGN KEY ("+CAMPO_SUSCRIPCION_IDC+" ) REFERENCES "+TABLA_SUSCRIPCION+" ("+CAMPO_SUSCRIPCION+"))";
 
     //Creación de la tabla vehiculo
     public static  final String CREAR_TABLA_VEHICULO=

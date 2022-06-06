@@ -1,4 +1,4 @@
-package com.example.ParqueaderoEstacionAppBrilliant;
+/*package com.example.ParqueaderoEstacionAppBrilliant;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -82,11 +82,11 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         //Editar Usuario
         String[] parametro= new String[]{campoIDU.getText().toString()};
         ContentValues values = new ContentValues();
-        values.put(Utilidades.CAMPO_NOMBRE,campoNombre.getText().toString());
-        values.put(Utilidades.CAMPO_APELLIDO,campoApellido.getText().toString());
-        values.put(Utilidades.CAMPO_TELEFONO,campoTelefono.getText().toString());
-        Long idresultante=db.insert(Utilidades.TABLA_USUARIO,Utilidades.CAMPO_IDU,values);
-        db.update(Utilidades.TABLA_USUARIO, values, Utilidades.CAMPO_IDU+"=?",parametro);
+        values.put(Utilidades.CAMPO_NOMBRECLIENTE,campoNombre.getText().toString());
+        values.put(Utilidades.CAMPO_APELLIDOCLIENTE,campoApellido.getText().toString());
+        values.put(Utilidades.CAMPO_TELEFONOCLIENTE,campoTelefono.getText().toString());
+        Long idresultante=db.insert(Utilidades.TABLA_CLIENTES,Utilidades.CAMPO_IDCLIENTE,values);
+        db.update(Utilidades.TABLA_CLIENTES, values, Utilidades.CAMPO_IDCLIENTE+"=?",parametro);
         Toast.makeText(getApplicationContext(), "Se ha actualizado la celda", Toast.LENGTH_SHORT).show();
 
         //Editar Cliente
@@ -121,7 +121,7 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
         String[] parametro= new String[]{campoIDU.getText().toString()};
-        String[] campos=new String[]{Utilidades.CAMPO_NOMBRE, Utilidades.CAMPO_APELLIDO, Utilidades.CAMPO_TELEFONO};
+        String[] campos=new String[]{Utilidades.CAMPO_NOMBRECLIENTE, Utilidades.CAMPO_ID_CLIENTE, Utilidades.CAMPO_ID_CLIENTE};
         //Busqueda datos tabla usuario
         try{
             Cursor cursor= db.query(Utilidades.TABLA_USUARIO, campos,Utilidades.CAMPO_IDU+"=?", parametro,null,null,null);
@@ -184,3 +184,4 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
 
 
 }
+*/
