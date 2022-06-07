@@ -35,7 +35,6 @@ public class Utilidades {
     public static final String TABLA_CLIENTES="clientes";
     public static final String CAMPO_IDCLIENTE="idCliente";
     public static final String CAMPO_NOMBRECLIENTE="nombreCliente";
-    public static final String CAMPO_APELLIDOCLIENTE="apellidoCliente";
     public static final String CAMPO_TELEFONOCLIENTE="telefonoCliente";
     public static final String CAMPO_CORREOCLIENTE="correoCliente";
 // constantes de tabla CLIENTES
@@ -60,7 +59,7 @@ public class Utilidades {
     //Creación de la tabla CLIENTES
     public static  final String CREAR_TABLA_CLIENTES=
             "CREATE TABLE "+TABLA_CLIENTES+" ("+CAMPO_IDCLIENTE+" TEXT PRIMARY KEY UNIQUE, "+
-                    CAMPO_NOMBRECLIENTE+" TEXT, "+CAMPO_APELLIDOCLIENTE+" TEXT, "+CAMPO_TELEFONOCLIENTE+" TEXT, "+CAMPO_CORREOCLIENTE+" TEXT)";
+                    CAMPO_NOMBRECLIENTE+" TEXT, "+CAMPO_TELEFONOCLIENTE+" TEXT, "+CAMPO_CORREOCLIENTE+" TEXT)";
 
     //Creación de la tabla VEHICULOS
     public static  final String CREAR_TABLA_VEHICULOS=

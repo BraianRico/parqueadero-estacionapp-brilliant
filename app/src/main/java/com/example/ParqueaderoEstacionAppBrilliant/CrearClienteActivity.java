@@ -18,7 +18,7 @@ import com.example.ParqueaderoEstacionAppBrilliant.utilidades.Utilidades;
 
 public class CrearClienteActivity extends AppCompatActivity implements View.OnClickListener{
 
-    EditText camposIdCliente, campoNombre, campoApellido, campoTelefono, campoCorreo, campoPlaca, campoModelo, campoMarca, campoColor, campoc;
+    EditText camposIdCliente, campoNombre,  campoTelefono, campoCorreo, campoPlaca, campoModelo, campoMarca, campoColor, campoc;
     Button btnRegresar, btnGuardar;
     Cursor tempIdCliente;
 
@@ -30,7 +30,6 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
 
         camposIdCliente= findViewById(R.id.txtcampoIdcliente);
         campoNombre=findViewById(R.id.txtcampoNombre);
-        campoApellido=findViewById(R.id.txtcampoApellido);
         campoTelefono=findViewById(R.id.txtcampotelefono);
         campoCorreo=findViewById(R.id.txtcampoCorreo);
         campoPlaca=findViewById(R.id.txtcampoPlaca);
@@ -69,7 +68,6 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
         ContentValues values= new ContentValues();
         values.put(Utilidades.CAMPO_IDCLIENTE,camposIdCliente.getText().toString());
         values.put(Utilidades.CAMPO_NOMBRECLIENTE,campoNombre.getText().toString());
-        values.put(Utilidades.CAMPO_APELLIDOCLIENTE,campoApellido.getText().toString());
         values.put(Utilidades.CAMPO_TELEFONOCLIENTE,campoTelefono.getText().toString());
         values.put(Utilidades.CAMPO_CORREOCLIENTE,campoCorreo.getText().toString());
 
@@ -93,7 +91,6 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
     public void limpiar(){
         camposIdCliente.setText("");
         campoNombre.setText("");
-        campoApellido.setText("");
         campoTelefono.setText("");
         campoCorreo.setText("");
         campoPlaca.setText("");

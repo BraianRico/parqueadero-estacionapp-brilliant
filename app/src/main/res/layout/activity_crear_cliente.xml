@@ -67,29 +67,14 @@
 
             <EditText
                 android:id="@+id/txtcampoNombre"
-                android:layout_width="170dp"
+                android:layout_width="353dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_text"
                 android:backgroundTint="#40C19350"
                 android:ems="10"
-                android:hint="Nombre"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:paddingStart="15dp"
-                android:textColorHint="#63FFFFFF" />
-
-            <EditText
-                android:id="@+id/txtcampoApellido"
-                android:layout_width="170dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="207dp"
-                android:layout_marginTop="-40dp"
-                android:background="@drawable/border_text"
-                android:backgroundTint="#40C19350"
-                android:ems="10"
-                android:hint="Apellido"
+                android:hint="Nombre Completo"
                 android:inputType="textPersonName"
                 android:padding="5dp"
                 android:paddingStart="15dp"
