@@ -95,35 +95,22 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="16dp"
                 android:text="Editar Cliente"
                 android:textColor="#c2ffffff"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/campoIdNombre"
-                android:layout_width="170dp"
+                android:id="@+id/campoNombreCliente"
+                android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/border_text"
                 android:backgroundTint="#40C19350"
                 android:ems="10"
-                android:hint="Nombre"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:paddingStart="15dp" />
-
-            <EditText
-                android:id="@+id/campoIdApellido"
-                android:layout_width="170dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="207dp"
-                android:layout_marginTop="-40dp"
-                android:background="@drawable/border_text"
-                android:backgroundTint="#40C19350"
-                android:ems="10"
-                android:hint="Apellido"
+                android:hint="Nombre Completo"
                 android:inputType="textPersonName"
                 android:padding="5dp"
                 android:paddingStart="15dp" />
@@ -160,6 +147,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="209dp"
                 android:layout_height="31dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="16dp"
                 android:text="Datos del Vehículo"
                 android:textColor="#c2ffffff"

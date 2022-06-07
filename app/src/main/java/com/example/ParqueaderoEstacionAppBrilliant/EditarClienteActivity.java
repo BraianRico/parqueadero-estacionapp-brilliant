@@ -1,4 +1,4 @@
-/*package com.example.ParqueaderoEstacionAppBrilliant;
+package com.example.ParqueaderoEstacionAppBrilliant;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -18,7 +18,7 @@ import com.example.ParqueaderoEstacionAppBrilliant.utilidades.Utilidades;
 
 public class EditarClienteActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText campoIDU, campoIDUC, campoNombre, campoApellido, campoTelefono, campoCorreo, campoPlaca, campoModelo, campoMarca, campoColor, campoIdCliente;
+    EditText  campoNombreCliente, campoTelefono, campoCorreo, campoPlaca, campoModelo, campoMarca, campoColor, campoIdCedula;
     Button btnRegresar, btnGuardar, btnConsultar, btnEliminar2;
 
     @Override
@@ -27,11 +27,8 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         setContentView(R.layout.activity_editar_cliente);
 
-        campoIDU= findViewById(R.id.campoIdCedula);
-        campoIdCliente= findViewById(R.id.campoIdCliente);
-        campoIDUC= findViewById(R.id.campoIdCedula);
-        campoNombre=findViewById(R.id.campoIdNombre);
-        campoApellido=findViewById(R.id.campoIdApellido);
+        campoIdCedula= findViewById(R.id.campoIdCedula);
+        campoNombreCliente=findViewById(R.id.campoNombreCliente);
         campoTelefono=findViewById(R.id.campoIdTelefono);
         campoCorreo=findViewById(R.id.campoIdCorreo);
         campoPlaca=findViewById(R.id.campoIdPlaca);
@@ -79,40 +76,39 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
 
-        //Editar Usuario
-        String[] parametro= new String[]{campoIDU.getText().toString()};
-        ContentValues values = new ContentValues();
-        values.put(Utilidades.CAMPO_NOMBRECLIENTE,campoNombre.getText().toString());
-        values.put(Utilidades.CAMPO_APELLIDOCLIENTE,campoApellido.getText().toString());
+        String[] parametro= new String[]{campoIdCedula.getText().toString()};
+
+        //Datos de CLIENTES
+        ContentValues values= new ContentValues();
+        values.put(Utilidades.CAMPO_NOMBRECLIENTE,campoNombreCliente.getText().toString());
         values.put(Utilidades.CAMPO_TELEFONOCLIENTE,campoTelefono.getText().toString());
-        Long idresultante=db.insert(Utilidades.TABLA_CLIENTES,Utilidades.CAMPO_IDCLIENTE,values);
+        values.put(Utilidades.CAMPO_CORREOCLIENTE,campoCorreo.getText().toString());
+
         db.update(Utilidades.TABLA_CLIENTES, values, Utilidades.CAMPO_IDCLIENTE+"=?",parametro);
-        Toast.makeText(getApplicationContext(), "Se ha actualizado la celda", Toast.LENGTH_SHORT).show();
 
-        //Editar Cliente
-        String[] parametro1= new String[]{campoIdCliente.getText().toString()};
-        ContentValues values1 = new ContentValues();
-        values1.put(Utilidades.CAMPO_IDUC,campoIDU.getText().toString());
-        values1.put(Utilidades.CAMPO_CORREO,campoCorreo.getText().toString());
-        Long idresultante1=db.insert(Utilidades.TABLA_CLIENTE,Utilidades.CAMPO_ID_CLIENTE,values1);
-        db.update(Utilidades.TABLA_CLIENTE, values1, Utilidades.CAMPO_ID_CLIENTE+"=?",parametro1);
 
-        //Editar Vehículo
-        String[] parametro2= new String[]{campoPlaca.getText().toString()};
-        ContentValues values2= new ContentValues();
-        values2.put(Utilidades.CAMPO_MARCA,campoMarca.getText().toString());
-        values2.put(Utilidades.CAMPO_MODELO,campoModelo.getText().toString());
-        values2.put(Utilidades.CAMPO_COLOR,campoColor.getText().toString());
-        Long idresultante2=db.insert(Utilidades.TABLA_VEHICULO,Utilidades.CAMPO_ID_PLACA,values2);
-        db.update(Utilidades.TABLA_VEHICULO, values2, Utilidades.CAMPO_ID_PLACA+"=?",parametro2);
+        //Datos de VEHICULOS
+        ContentValues values1= new ContentValues();
+        values1.put(Utilidades.CAMPO_IDPLACAVEHICULO,campoPlaca.getText().toString());
+        values1.put(Utilidades.CAMPO_MARCAVEHICULO,campoMarca.getText().toString());
+        values1.put(Utilidades.CAMPO_MODELOVEHICULO,campoModelo.getText().toString());
+        values1.put(Utilidades.CAMPO_COLORVEHICULO,campoColor.getText().toString());
+        values1.put(Utilidades.CAMPO_IDCLIENTEVEHICULO,campoIdCedula.getText().toString());
+        values1.put(Utilidades.CAMPO_NOMBRECLIENTEVEHICULO,campoNombreCliente.getText().toString());
+
+        db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO+"=?",parametro);
+
         limpiar();
+        Toast.makeText(getApplicationContext(), "Se ha actualizado el cliente  ", Toast.LENGTH_LONG).show();
+
+
     }
 
     public void eliminarCliente(){
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
-        String[] parametro1= new String[]{campoIdCliente.getText().toString()};
-        db.delete(Utilidades.TABLA_CLIENTE,Utilidades.CAMPO_ID_CLIENTE+"=?", parametro1);
+        String[] parametro1= new String[]{campoIdCedula.getText().toString()};
+        db.delete(Utilidades.TABLA_CLIENTES,Utilidades.CAMPO_IDCLIENTE+"=?", parametro1);
         Toast.makeText(getApplicationContext(), "Se ha eliminado el cliente", Toast.LENGTH_SHORT).show();
         limpiar();
     }
@@ -120,30 +116,15 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
     private void consultar(){
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
-        String[] parametro= new String[]{campoIDU.getText().toString()};
-        String[] campos=new String[]{Utilidades.CAMPO_NOMBRECLIENTE, Utilidades.CAMPO_ID_CLIENTE, Utilidades.CAMPO_ID_CLIENTE};
+        String[] parametro= new String[]{campoIdCedula.getText().toString()};
+        String[] campos=new String[]{Utilidades.CAMPO_NOMBRECLIENTE, Utilidades.CAMPO_TELEFONOCLIENTE, Utilidades.CAMPO_CORREOCLIENTE};
         //Busqueda datos tabla usuario
         try{
-            Cursor cursor= db.query(Utilidades.TABLA_USUARIO, campos,Utilidades.CAMPO_IDU+"=?", parametro,null,null,null);
+            Cursor cursor= db.query(Utilidades.TABLA_CLIENTES, campos,Utilidades.CAMPO_IDCLIENTE+"=?", parametro,null,null,null);
             cursor.moveToFirst();
-            campoNombre.setText(cursor.getString(0));
-            campoApellido.setText(cursor.getString(1));
-            campoTelefono.setText(cursor.getString(2));
-            cursor.close();
-        }catch (Exception e){
-            Toast.makeText(getApplicationContext(), "La cédula no existe", Toast.LENGTH_SHORT).show();
-            limpiar();
-        }
-        //Busqueda datos tabla cliente
-        String[] parametro1= new String[]{campoIDUC.getText().toString()};
-        String[] campos1=new String[]{Utilidades.CAMPO_ID_CLIENTE, Utilidades.CAMPO_CORREO};
-
-        try{
-            Cursor cursor= db.query(Utilidades.TABLA_CLIENTE, campos1,Utilidades.CAMPO_IDUC+"=?", parametro1,null,null,null);
-            cursor.moveToFirst();
-            campoIdCliente.setText(cursor.getString(0));
-            campoCorreo.setText(cursor.getString(1));
-
+            campoNombreCliente.setText(cursor.getString(0));
+            campoTelefono.setText(cursor.getString(1));
+            campoCorreo.setText(cursor.getString(2));
             cursor.close();
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), "La cédula no existe", Toast.LENGTH_SHORT).show();
@@ -151,10 +132,10 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         }
 
         //Busqueda datos tabla vehículo
-        String[] parametro2= new String[]{campoIdCliente.getText().toString()};
-        String[] campos2=new String[]{Utilidades.CAMPO_ID_PLACA, Utilidades.CAMPO_MODELO, Utilidades.CAMPO_MARCA, Utilidades.CAMPO_COLOR};
+        String[] parametro2= new String[]{campoIdCedula.getText().toString()};
+        String[] campos2=new String[]{Utilidades.CAMPO_IDPLACAVEHICULO, Utilidades.CAMPO_MODELOVEHICULO, Utilidades.CAMPO_MARCAVEHICULO, Utilidades.CAMPO_COLORVEHICULO};
         try{
-            Cursor cursor= db.query(Utilidades.TABLA_VEHICULO, campos2,Utilidades.CAMPO_IDC+"=?", parametro2,null,null,null);
+            Cursor cursor= db.query(Utilidades.TABLA_VEHICULOS, campos2,Utilidades.CAMPO_IDCLIENTEVEHICULO+"=?", parametro2,null,null,null);
             cursor.moveToFirst();
             campoPlaca.setText(cursor.getString(0));
             campoModelo.setText(cursor.getString(1));
@@ -170,18 +151,16 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
 
     //Método para limpiar los datos de las vistas
     public void limpiar(){
-        campoIDU.setText("");
-        campoNombre.setText("");
-        campoApellido.setText("");
+        campoIdCedula.setText("");
+        campoNombreCliente.setText("");
         campoTelefono.setText("");
         campoCorreo.setText("");
         campoMarca.setText("");
         campoModelo.setText("");
         campoColor.setText("");
         campoPlaca.setText("");
-        campoIdCliente.setText("");
+
     }
 
 
 }
-*/

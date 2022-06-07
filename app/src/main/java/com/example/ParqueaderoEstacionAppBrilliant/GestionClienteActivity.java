@@ -34,10 +34,10 @@ public class GestionClienteActivity extends AppCompatActivity implements View.On
                 Intent i1 = new Intent(GestionClienteActivity.this,CrearClienteActivity.class);
                 startActivity(i1);
                 break;
-            /*case R.id.btnEditarCliente:
+            case R.id.btnEditarCliente:
                 Intent i2 = new Intent(GestionClienteActivity.this,EditarClienteActivity.class);
                 startActivity(i2);
-                break;*/
+                break;
             case R.id.btnregresar:
                 Intent i3 = new Intent(GestionClienteActivity.this,MainActivity.class);
                 startActivity(i3);
