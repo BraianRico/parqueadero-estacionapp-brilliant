@@ -55,7 +55,7 @@ public class AsignarCeldaActivity extends AppCompatActivity implements View.OnCl
         //Asignación de celda
         String[] parametro= new String[]{campoIdCelda.getText().toString()};
         ContentValues values = new ContentValues();
-        values.put(Utilidades.CAMPO_PLACAC,campoPlacaId.getText().toString());
+        values.put(Utilidades.CAMPO_IDPLACAVEHICULOC,campoPlacaId.getText().toString());
         values.put(Utilidades.CAMPO_ESTADO,"1");
         db.update(Utilidades.TABLA_CELDA, values, Utilidades.CAMPO_CELDA+"=?",parametro);
         Toast.makeText(getApplicationContext(), "Se ha asignado la celda", Toast.LENGTH_SHORT).show();

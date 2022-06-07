@@ -15,20 +15,12 @@ public class Utilidades {
     public static final String CAMPO_IDUC="usuario_id";
     public static final String CAMPO_SUSCRIPCION_IDC="suscripcion_id";
 
-    //Constantes campos tabla vehiculo
-    public static final String TABLA_VEHICULO="vehiculo";
-    public static final String CAMPO_ID_PLACA="id_placa";
-    public static final String CAMPO_MODELO="modelo";
-    public static final String CAMPO_MARCA="marca";
-    public static final String CAMPO_COLOR="color";
-    public static final String CAMPO_IDC="cliente_id";
-
     //constantes de tabla celda
     public static final String TABLA_CELDA="celda";
     public static final String CAMPO_CELDA="id_celda";
     public static final String CAMPO_UBICACION="ubicacion";
     public static final String CAMPO_ESTADO="estado";
-    public static final String CAMPO_PLACAC="placa_id";
+    public static final String CAMPO_IDPLACAVEHICULOC="placa_id";
 
     //Constantes de la tabla factura
     public static final String TABLA_FACTURA="factura";
@@ -44,7 +36,7 @@ public class Utilidades {
     public static final String CAMPO_FECHA_HORA="fecha_hora";
     public static final String CAMPO_MOVIMIENTO="movimiento";
     public static final String CAMPO_NOVEDAD="novedad";
-    public static final String CAMPO_PLACAR="placa_id";
+    public static final String CAMPO_IDPLACAVEHICULOR="placa_id";
 
     // constantes de tabla CLIENTES
     public static final String TABLA_CLIENTES="clientes";
@@ -83,14 +75,9 @@ public class Utilidades {
                     CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
 
 
-    //Creación de la tabla vehiculo
-    public static  final String CREAR_TABLA_VEHICULO=
-            "CREATE TABLE "+TABLA_VEHICULO+" ("+CAMPO_ID_PLACA+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELO+" TEXT, "+CAMPO_MARCA+" TEXT, "+
-                    CAMPO_COLOR+" TEXT, "+CAMPO_IDC+" INTEGER, FOREIGN KEY ( "+CAMPO_IDC+") REFERENCES "+TABLA_CLIENTE+" ("+CAMPO_ID_CLIENTE+"))";
-
     //Creación de la tabla celda
     public static final String CREAR_TABLA_CELDA=
-            "CREATE TABLE "+TABLA_CELDA+" ("+CAMPO_CELDA+" INTEGER PRIMARY KEY, "+CAMPO_UBICACION+" TEXT, "+CAMPO_ESTADO+" INTEGER, "+CAMPO_PLACAC+" TEXT, FOREIGN KEY ("+CAMPO_PLACAC+" ) REFERENCES "+TABLA_VEHICULO+" ("+CAMPO_ID_PLACA+"))";
+            "CREATE TABLE "+TABLA_CELDA+" ("+CAMPO_CELDA+" INTEGER PRIMARY KEY, "+CAMPO_UBICACION+" TEXT, "+CAMPO_ESTADO+" INTEGER, "+CAMPO_IDPLACAVEHICULOC+" TEXT, FOREIGN KEY ("+CAMPO_IDPLACAVEHICULOC+" ) REFERENCES "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+"))";
 
     //Creación de la tabla factura
     public static final String CREAR_TABLA_FACTURA=
@@ -98,7 +85,7 @@ public class Utilidades {
 
     //Creación de la tabla registro
     public static final String CREAR_TABLA_REGISTRO =
-            "CREATE TABLE "+TABLA_REGISTRO+" ("+CAMPO_ID_REGISTRO+" INTEGER PRIMARY KEY, "+CAMPO_FECHA_HORA+" TEXT, "+CAMPO_MOVIMIENTO+" TEXT, "+CAMPO_NOVEDAD+" TEXT, "+CAMPO_PLACAR+" TEXT, FOREIGN KEY ("+CAMPO_PLACAR+" ) REFERENCES  "+TABLA_VEHICULO+" ("+CAMPO_ID_PLACA+"))";
+            "CREATE TABLE "+TABLA_REGISTRO+" ("+CAMPO_ID_REGISTRO+" INTEGER PRIMARY KEY, "+CAMPO_FECHA_HORA+" TEXT, "+CAMPO_MOVIMIENTO+" TEXT, "+CAMPO_NOVEDAD+" TEXT,  "+CAMPO_IDPLACAVEHICULOR+" TEXT, FOREIGN KEY ("+CAMPO_IDPLACAVEHICULOR+" ) REFERENCES "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+"))";
 
 
 }
