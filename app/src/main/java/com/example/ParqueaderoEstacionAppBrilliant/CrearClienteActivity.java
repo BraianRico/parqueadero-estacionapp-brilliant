@@ -73,7 +73,7 @@ public class CrearClienteActivity extends AppCompatActivity implements View.OnCl
         values.put(Utilidades.CAMPO_TELEFONOCLIENTE,campoTelefono.getText().toString());
         values.put(Utilidades.CAMPO_CORREOCLIENTE,campoCorreo.getText().toString());
 
-        Long idresultante=db.insert(Utilidades.TABLA_CLIENTES,Utilidades.CAMPO_ID_CLIENTE,values);
+        Long idresultante=db.insert(Utilidades.TABLA_CLIENTES,Utilidades.CAMPO_IDCLIENTE,values);
 
         //Datos de VEHICULOS
         ContentValues values1= new ContentValues();

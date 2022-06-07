@@ -8,13 +8,6 @@ public class Utilidades {
     public static final String CAMPO_USR="usr";
     public static final String CAMPO_PASSWORD="password";
 
-    //constantes de tabla cliente
-    public static final String TABLA_CLIENTE="cliente";
-    public static final String CAMPO_ID_CLIENTE="id_cliente";
-    public static final String CAMPO_CORREO="correo";
-    public static final String CAMPO_IDUC="usuario_id";
-    public static final String CAMPO_SUSCRIPCION_IDC="suscripcion_id";
-
     //constantes de tabla celda
     public static final String TABLA_CELDA="celda";
     public static final String CAMPO_CELDA="id_celda";

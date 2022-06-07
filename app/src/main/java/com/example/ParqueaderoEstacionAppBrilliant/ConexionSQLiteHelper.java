@@ -33,7 +33,6 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_VEHICULOS);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_REGISTRO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CELDA);
-        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_CLIENTE);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_EMPLEADO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_FACTURA);
         onCreate(db);
