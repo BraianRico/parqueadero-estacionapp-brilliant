@@ -20,7 +20,7 @@ import java.util.Calendar;
 public class RegistroEntradaSalidaActivity extends AppCompatActivity implements View.OnClickListener{
 
     //se inicializan los campos y boton que se utilizan
-    EditText renroplaca, remarca, remodelo, recolor, recliente, reingreso, resalida;
+    EditText renroplaca, remarca, remodelo, recolor, recliente, reingreso, resalida, recelda;
     Button btnRegistrarIngreso, btnRegistrarSalida, btnBuscar, btnRegresar;
     String mydate, ingreso, salida;
 
@@ -37,6 +37,7 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         recliente = (EditText) findViewById(R.id.recliente);
         reingreso = (EditText) findViewById(R.id.reingreso);
         resalida = (EditText) findViewById(R.id.resalida);
+        recelda = (EditText) findViewById(R.id.recelda);
 
 
         btnRegistrarIngreso = (Button) findViewById(R.id.btnRegistrarIngreso);
@@ -84,20 +85,19 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         SQLiteDatabase db= conn.getWritableDatabase();
         String[] parametro= new String[]{renroplaca.getText().toString()};
         //Toast.makeText(getApplicationContext(), "La placa a buscar es "+renroplaca, Toast.LENGTH_SHORT).show();
-        String[] campos=new String[]{Utilidades.CAMPO_MODELOVEHICULO, Utilidades.CAMPO_MARCAVEHICULO, Utilidades.CAMPO_COLORVEHICULO,
-                Utilidades.CAMPO_NOMBRECLIENTEVEHICULO, Utilidades.CAMPO_HORAINGRESO, Utilidades. CAMPO_HORASALIDA};
+        String[] campos=new String[]{Utilidades.CAMPO_MARCAVEHICULO, Utilidades.CAMPO_COLORVEHICULO,
+                Utilidades.CAMPO_NOMBRECLIENTEVEHICULO, Utilidades.CAMPO_HORAINGRESO, Utilidades. CAMPO_HORASALIDA, Utilidades.CAMPO_CELDAVEHICULO};
 
         try{
             Cursor cursor= db.query(Utilidades.TABLA_VEHICULOS, campos,Utilidades.CAMPO_IDPLACAVEHICULO+"=?", parametro,null,null,null);
             cursor.moveToFirst();
 
-            remodelo.setText(cursor.getString(0));
-            remarca.setText(cursor.getString(1));
-            recolor.setText(cursor.getString(2));
-            recliente.setText(cursor.getString(3));
-            reingreso.setText(cursor.getString(4));
-            resalida.setText(cursor.getString(5));
-
+            remarca.setText(cursor.getString(0));
+            recolor.setText(cursor.getString(1));
+            recliente.setText(cursor.getString(2));
+            reingreso.setText(cursor.getString(3));
+            resalida.setText(cursor.getString(4));
+            recelda.setText(cursor.getString(5));
 
             cursor.close();
         }catch (Exception e){
@@ -135,6 +135,8 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         ConexionSQLiteHelper conn=new ConexionSQLiteHelper(this, "parqueadero_db", null, 1);
         SQLiteDatabase db= conn.getWritableDatabase();
         String[] parametro2= new String[]{renroplaca.getText().toString()};
+        String[] parametro3= new String[]{recelda.getText().toString()};
+
         String[] campos=new String[]{Utilidades.CAMPO_HORAINGRESO, Utilidades.CAMPO_HORASALIDA};
 
         Cursor cursor= db.query(Utilidades.TABLA_VEHICULOS, campos,Utilidades.CAMPO_IDPLACAVEHICULO+"=?", parametro2,null,null,null);
@@ -146,10 +148,16 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
             Toast.makeText(getApplicationContext(), "No existe una fecha de INGRESO", Toast.LENGTH_SHORT).show();
         }else{
             ContentValues values1 = new ContentValues();
+            ContentValues values2 = new ContentValues();
             mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
             values1.put(Utilidades.CAMPO_HORASALIDA, mydate.toString());
+            values2.put(Utilidades.CAMPO_ESTADO, 0);
+
+
 
             db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO + "=?", parametro2);
+            db.update(Utilidades.TABLA_CELDA, values2, Utilidades.CAMPO_CELDA + "=?", parametro3);
+
             Toast.makeText(getApplicationContext(), "Se ha guardado la fecha de SALIDA ", Toast.LENGTH_SHORT).show();
             limpiar();
             cursor.close();

@@ -50,6 +50,8 @@ public class Utilidades {
     public static final String CAMPO_NOMBRECLIENTEVEHICULO="clienteNombreVehiculo";
     public static final String CAMPO_HORAINGRESO="horaIngreso";
     public static final String CAMPO_HORASALIDA="horaSalida";
+    public static final String CAMPO_CELDAVEHICULO="celdaVehiculo";
+
 
     // Creación de la tabla empleado
     public static final String CREAR_TABLA_EMPLEADO=
@@ -64,7 +66,7 @@ public class Utilidades {
     //Creación de la tabla VEHICULOS
     public static  final String CREAR_TABLA_VEHICULOS=
             "CREATE TABLE "+TABLA_VEHICULOS+" ("+CAMPO_IDPLACAVEHICULO+" TEXT PRIMARY KEY UNIQUE, "+CAMPO_MODELOVEHICULO+" TEXT, "+CAMPO_MARCAVEHICULO+" TEXT, "+
-                    CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT )";
+                    CAMPO_COLORVEHICULO+" TEXT, "+CAMPO_IDCLIENTEVEHICULO+" TEXT, "+CAMPO_NOMBRECLIENTEVEHICULO+" TEXT,"+CAMPO_HORAINGRESO+" TEXT, "+CAMPO_HORASALIDA+" TEXT, "+CAMPO_CELDAVEHICULO+" TEXT)";
 
 
     //Creación de la tabla celda
