@@ -101,11 +101,6 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
             resalida.setText(cursor.getString(5));
             recelda.setText(cursor.getString(6));
 
-            /*recliente.setText(cursor.getString(2));
-            reingreso.setText(cursor.getString(3));
-            resalida.setText(cursor.getString(4));
-            recelda.setText(cursor.getString(5));*/
-
             cursor.close();
         }catch (Exception e){
             Toast.makeText(getApplicationContext(), "La placa no existe", Toast.LENGTH_SHORT).show();
