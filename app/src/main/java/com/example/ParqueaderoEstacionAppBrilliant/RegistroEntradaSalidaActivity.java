@@ -85,8 +85,9 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         SQLiteDatabase db= conn.getWritableDatabase();
         String[] parametro= new String[]{renroplaca.getText().toString()};
         //Toast.makeText(getApplicationContext(), "La placa a buscar es "+renroplaca, Toast.LENGTH_SHORT).show();
-        String[] campos=new String[]{Utilidades.CAMPO_MARCAVEHICULO, Utilidades.CAMPO_COLORVEHICULO,
-                Utilidades.CAMPO_NOMBRECLIENTEVEHICULO, Utilidades.CAMPO_HORAINGRESO, Utilidades. CAMPO_HORASALIDA, Utilidades.CAMPO_CELDAVEHICULO};
+        String[] campos=new String[]{Utilidades.CAMPO_MARCAVEHICULO, Utilidades.CAMPO_COLORVEHICULO, Utilidades.CAMPO_MODELOVEHICULO,
+                Utilidades.CAMPO_NOMBRECLIENTEVEHICULO, Utilidades.CAMPO_HORAINGRESO, Utilidades. CAMPO_HORASALIDA,
+                Utilidades.CAMPO_CELDAVEHICULO};
 
         try{
             Cursor cursor= db.query(Utilidades.TABLA_VEHICULOS, campos,Utilidades.CAMPO_IDPLACAVEHICULO+"=?", parametro,null,null,null);
@@ -94,10 +95,16 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
 
             remarca.setText(cursor.getString(0));
             recolor.setText(cursor.getString(1));
-            recliente.setText(cursor.getString(2));
+            remodelo.setText(cursor.getString(2));
+            recliente.setText(cursor.getString(3));
+            reingreso.setText(cursor.getString(4));
+            resalida.setText(cursor.getString(5));
+            recelda.setText(cursor.getString(6));
+
+            /*recliente.setText(cursor.getString(2));
             reingreso.setText(cursor.getString(3));
             resalida.setText(cursor.getString(4));
-            recelda.setText(cursor.getString(5));
+            recelda.setText(cursor.getString(5));*/
 
             cursor.close();
         }catch (Exception e){
@@ -173,6 +180,7 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
         recliente.setText("");
         reingreso.setText("");
         resalida.setText("");
+        recelda.setText("");
     }
 
 
