@@ -86,8 +86,8 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
 
         db.update(Utilidades.TABLA_CLIENTES, values, Utilidades.CAMPO_IDCLIENTE+"=?",parametro);
 
-
         //Datos de VEHICULOS
+        String[] parametro1 = new  String[]{campoNombreCliente.getText().toString()};
         ContentValues values1= new ContentValues();
         values1.put(Utilidades.CAMPO_IDPLACAVEHICULO,campoPlaca.getText().toString());
         values1.put(Utilidades.CAMPO_MARCAVEHICULO,campoMarca.getText().toString());
@@ -96,7 +96,7 @@ public class EditarClienteActivity extends AppCompatActivity implements View.OnC
         values1.put(Utilidades.CAMPO_IDCLIENTEVEHICULO,campoIdCedula.getText().toString());
         values1.put(Utilidades.CAMPO_NOMBRECLIENTEVEHICULO,campoNombreCliente.getText().toString());
 
-        db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO+"=?",parametro);
+        db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_NOMBRECLIENTEVEHICULO+"=?",parametro1);
 
         limpiar();
         Toast.makeText(getApplicationContext(), "Se ha actualizado el cliente  ", Toast.LENGTH_LONG).show();
