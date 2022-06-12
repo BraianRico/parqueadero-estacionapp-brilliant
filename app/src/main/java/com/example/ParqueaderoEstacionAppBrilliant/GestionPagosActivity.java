@@ -118,22 +118,21 @@ public class GestionPagosActivity extends AppCompatActivity implements View.OnCl
                 {
                         Utilidades.CAMPO_HORAINGRESO,
                         Utilidades.CAMPO_HORASALIDA,
-                        Utilidades.CAMPO_COSTOTOTAL,
                         Utilidades.CAMPO_ESTADOPAGO
                 };
 
         Cursor cursor = db.query(Utilidades.TABLA_VEHICULOS, campos, Utilidades.CAMPO_IDPLACAVEHICULO + "=?", parametro2, null, null, null);
         cursor.moveToFirst();
 
-        if(cursor.getString(3) != null) {
-            Toast.makeText(getApplicationContext(), "ERROR, El pago ya fue realizado ", Toast.LENGTH_SHORT).show();
+
+        if(cursor.getString(1) == null) {
+            Toast.makeText(getApplicationContext(), "ERROR, aun no se ha registrado la salida del vehiculo ", Toast.LENGTH_SHORT).show();
             limpiar();
             cursor.close();
-        }else if(cursor.getString(2) == null){
-            Toast.makeText(getApplicationContext(), "Aun no se ha registrado la salida del vehiculo ", Toast.LENGTH_SHORT).show();
-            limpiar();
-            cursor.close();
-        }else if(cursor.getString(0) != null && cursor.getString(1) != null && cursor.getString(3) == null) {
+        }else if(cursor.getString(2) != null) {
+                Toast.makeText(getApplicationContext(), "ERROR, El pago ya fue realizado ", Toast.LENGTH_SHORT).show();
+
+            }else if(cursor.getString(0) != null && cursor.getString(1) != null && cursor.getString(2) == null){
 
             ContentValues values1 = new ContentValues();
             values1.put(Utilidades.CAMPO_ESTADOPAGO, "Realizado");
@@ -145,41 +144,12 @@ public class GestionPagosActivity extends AppCompatActivity implements View.OnCl
             cursor.close();
 
         } else {
-            Toast.makeText(getApplicationContext(), "No se puede registrar el pago", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "ERROR, No se puede registrar el pago", Toast.LENGTH_SHORT).show();
             limpiar();
             cursor.close();
 
         }
     }
-
-        /*ContentValues values2 = new ContentValues();
-        mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-        values1.put(Utilidades.CAMPO_HORASALIDA, mydate.toString());
-        values2.put(Utilidades.CAMPO_ESTADO, 0);
-
-
-        db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO + "=?", parametro2);
-
-
-        } else if (cursor.getString(0) == null) {
-            Toast.makeText(getApplicationContext(), "No existe una fecha de INGRESO", Toast.LENGTH_SHORT).show();
-        } else {
-            ContentValues values1 = new ContentValues();
-            ContentValues values2 = new ContentValues();
-            mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-            values1.put(Utilidades.CAMPO_HORASALIDA, mydate.toString());
-            values2.put(Utilidades.CAMPO_ESTADO, 0);
-
-
-            db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO + "=?", parametro2);
-            db.update(Utilidades.TABLA_CELDA, values2, Utilidades.CAMPO_CELDA + "=?", parametro3);
-
-            Toast.makeText(getApplicationContext(), "Se ha guardado la fecha de SALIDA ", Toast.LENGTH_SHORT).show();
-            limpiar();
-            cursor.close();
-        }
-
-    }*/
 
     //Método para limpiar los datos de las vistas
     private void limpiar() {

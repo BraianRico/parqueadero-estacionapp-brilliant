@@ -153,9 +153,8 @@ public class RegistroEntradaSalidaActivity extends AppCompatActivity implements 
             ContentValues values2 = new ContentValues();
             mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
             values1.put(Utilidades.CAMPO_HORASALIDA, mydate.toString());
+            values1.put(Utilidades.CAMPO_COSTOTOTAL, "$5000");
             values2.put(Utilidades.CAMPO_ESTADO, 0);
-
-
 
             db.update(Utilidades.TABLA_VEHICULOS, values1, Utilidades.CAMPO_IDPLACAVEHICULO + "=?", parametro2);
             db.update(Utilidades.TABLA_CELDA, values2, Utilidades.CAMPO_CELDA + "=?", parametro3);
