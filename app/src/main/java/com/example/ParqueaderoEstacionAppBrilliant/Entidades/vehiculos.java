@@ -13,6 +13,8 @@ public class vehiculos implements Serializable {
     private int horaIngreso;
     private int horaSalida;
     private String celdaVehiculo;
+    private String celdaCostoTotal;
+    private String celdaEstadoPago;
 
 
     //Se define el constructor
@@ -25,7 +27,9 @@ public class vehiculos implements Serializable {
             String clienteNombreVehiculo,
             int horaIngreso,
             int horaSalida,
-            String celdaVehiculo
+            String celdaVehiculo,
+            String celdaCostoTotal,
+            String celdaEstadoPago
             )
     {
         this.idPlacaVechiculo = idPlacaVechiculo;
@@ -112,5 +116,21 @@ public class vehiculos implements Serializable {
 
     public void setCeldaVehiculo(String celdaVehiculo) {
         this.celdaVehiculo = celdaVehiculo;
+    }
+
+    public String getCeldaCostoTotal() {
+        return celdaCostoTotal;
+    }
+
+    public void setCeldaCostoTotal(String celdaCostoTotal) {
+        this.celdaCostoTotal = celdaCostoTotal;
+    }
+
+    public String getCeldaEstadoPago() {
+        return celdaEstadoPago;
+    }
+
+    public void setCeldaEstadoPago(String celdaEstadoPago) {
+        this.celdaEstadoPago = celdaEstadoPago;
     }
 }

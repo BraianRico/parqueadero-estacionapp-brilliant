@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 miIntent=new Intent(MainActivity.this,GestionCeldasActivity.class);
                 break;
 
-           /* case R.id.btnpagos:
+           case R.id.btnpagos:
                 miIntent=new Intent(MainActivity.this,GestionPagosActivity.class);
-                break;*/
+                break;
 
         }
         if (miIntent!=null){
